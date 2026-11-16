@@ -1,0 +1,246 @@
+<style>
+  ol li::marker {
+    font-weight: bold;
+  }
+  
+    p, ul, ol, li, div {
+    text-align: left !important;
+  }
+</style>
+
+<style>
+  /* Menjangkau elemen teks umum */
+  p, li, h1, h2, h3, span {
+    color: #000000 !important;
+  }
+
+  /* Menjangkau formula matematika (MathJax / KaTeX) */
+  .mjx-chtml, .MathJax, .katex, .katex * {
+    color: #000000 !important;
+  }
+</style>
+
+
+<p style="text-align: justify;">​Pernahkah kamu merasa bingung saat mengerjakan soal aljabar dan tiba-tiba ragu apakah sebuah angka harus berubah dari positif ke negatif saat berpindah posisi? Atau kamu sering bingung kapan tanda pertidaksamaan harus dibalik?</p>
+
+<p style="text-align: justify;">Di artikel <i><a href="https://binderkedua.blogspot.com/2026/09/catatan-aljabar-dasar-dari-mana-kita.html">"Catatan Aljabar Dasar: Dari Mana Kita Harus Mulai Belajar?" </a> </i>sebelumnya, kita sudah mengupas tuntas mulai dari unsur-unsur aljabar, sifat-sifatnya, hingga teknik pemfaktoran. Nah, modal dasar itulah yang akan kita pakai sekarang.</p>
+
+<p style="text-align: justify;">​Di panduan kali ini, kita akan melangkah lebih jauh untuk menaklukkan <b>Persamaan Linear</b>—mulai dari <b>Satu Variabel (PLSV), Dua Variabel (PLDV)</b>, hingga <b>Tiga Variabel (PLTV)</b> secara logis tanpa sekadar menghafal rumus!</p>
+
+<!--KODE TOMBOL BACK TO TOP KHUSUS ARTIKEL INI-->
+<button id="backToTopBtn" onclick="scrollToTop()" style="background-color: #e84a43; border-color: currentcolor; border-image: none; border-radius: 50%; border-style: none; border-width: medium; border: none; bottom: 20px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: white; cursor: pointer; display: none; font-size: 16px; outline: none; padding: 12px 16px; position: fixed; right: 20px; transition: background 0.3s; z-index: 999;" title="Kembali ke atas">
+  ▲
+</button>
+
+<script>
+  let mybutton = document.getElementById("backToTopBtn");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<h2 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin-top: 30px;">
+  Persamaan Linear
+</h2>
+
+<p style="text-align: justify;"> Persamaan Linear adalah salah satu konsep paling mendasar dalam matematika yang menggambarkan hubungan garis lurus antara variabel - variabelnya.</p>
+<p style="text-align: justify;">Secara sederhana, disebut "linear" karena jika kita menggambar persamaannya ke dalam grafik, hasilnya akan membentuk garis lurus.</p>
+
+<h3 style="color:#000">
+  Karakteristik utamanya
+</h3>
+<ol style="text-align: justify;">
+  <li><strong>Pangkat Tertingginya adalah satu</strong><br />Variabel dalam persamaan linear tidak boleh memiliki pangkat lebih dari satu (misalnya: \(x^2\) atau \(y^2\), tidak diperbolehkan).</li>
+  
+  <li><strong>Variabel berdiri sendiri</strong><br >Variabel tidak boleh saling dikalikan (\(xy)\), tidak boleh di dalam akar \((\sqrt{x})\), dan tidak boleh sebagai penyebut \((\frac{1}{x})\).</li>
+  
+  <li><strong>Bentuk Grafik</strong><br />Jika digambarkan pada bidang kartesius, seluruh titik penyelesaiannya akan membentuk satu garis lurus tegak, mendatar, atau miring.</li>
+  
+  <li><strong>Bentuk Umum</strong>
+    <ul>
+      <li>Satu Variabel: \(ax + b = 0\) (dengan \(a ≠ 0\))</li>
+      <li>Dua Variabel: \(ax + by = c\) (dengan \(a, b ≠ 0\))</li>
+    </ul>
+  
+  <li><strong>Jumlah Penyelesaian</strong><br />Persamaan linear satu variabel memiliki tepat satu penyelesaian, sedangkan persamaan linear dua variabel memiliki tak hingga banyak pasangan penyelesaian (x,y).</li>
+</ol>
+
+<h2 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin-top: 30px;">
+  Jenis-jenis Persamaan Linear
+</h2>
+
+<ol>
+  <li><h3 style="color: #000;">Persamaan linear satu variabel (PLSV)</h3><p style="text-align: justify;">Persamaan ini hanya memiliki satu variabel (biasanya disimbolkan dengan huruf seperti \(x\) atau \(y\)) dan pangkat tertinggi dari variabel tersebut adalah satu.</p>
+    
+    <p><b>Bentuk Umum:</b></p>
+    \[ ax + b = c \]
+    <ul style="list-style-type:square;">
+<li>\(x\) = variabel (nilai yang belum di ketahui</li>
+<li>\(a\) = koefisien dari \(x (a ≠ 0) \)</li>
+<li>\(b\) dan \(c\) = Konstanta (angka) </li>
+     </ul>
+    
+<p><b>Ciri-ciri Utama</b></p>
+    <ul style="list-style-type: circle;">
+      <li>Menggunakan tanda hubung sama dengan (=).</li>
+<li>Hanya ada satu jenis variabel.</li>
+<li>Pangkat variabelnya adalah 1 (tidak ada \(x^2, x^3,\) dll).</li>
+     </ul>
+    
+    <p><b>Cara Menyelesaikan</b></p>
+<p style="text-align: justify;">Tujuan utama menyelesaikan PLSV adalah mencari nilai variabel agar persamaan bernilai benar, dengan cara mengisolasi variabel di satu sisi.</p>
+
+<p>Contoh 1 Cari nilai \(x\) dari persamaan:</p>
+    
+    \[ \mathbf{3x + 5 = 17} \]
+    
+<p><b>Pindahkan konstanta</b> ke ruas kanan (ubah tanda +5 menjadi -5):</p>
+    
+    \[ \begin{align*}
+    3x {\color{#e41b17}{+ 5}} &= 17 \\
+    3x &= 17 {\color{#e41b17}{- 5}} \\
+    3x &= 12
+    \end{align*} \]
+    
+<p><b>Bagi kedua ruas</b> dengan koefisien \(x\) (yaitu \(3\)):</p>
+    
+    \[ \begin{align*}
+    {\color{#1b8a6b}{3}}x &= 12 \\
+    x &= \frac{12}{\color{#1b8a6b}{3}} \\
+    x &= 4
+    \end{align*} \]
+    
+<div style="background: rgb(255, 255, 255); border-color: rgb(37, 99, 235) rgb(203, 213, 225) rgb(203, 213, 225); border-image: none; border-radius: 8px; border-style: solid; border-top: 4px solid #2563eb; border-width: 4px 1px 1px; border: 1px solid rgb(203, 213, 225); box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 6px -1px; margin-top: 25px; padding: 16px;">
+  <h4 style="color: #0f172a; margin: 0px 0px 8px;">⚡ Rangkuman Cepat</h4>
+  <p style="color: #475569; font-size: 14px; margin: 0px; text-align: justify;">Kenapa konstanta di depan variabel (misal: \(3x\)) bisa dipecah dan konstanta nya saat di pindah ruas menjadi pembagian?</p>
+<p><b>Operasi Kebalikan (Inverse)</b></p>
+  <ul style="text-align: justify;">
+    <li>Pada dasarnya \(3x\) = \(3 × x\).</li>
+    <li>Tujuan kita adalah mencari nilai 1x (atau x saja).</li>
+    <li>Karena x sedang <b>dikali 3</b>, maka lawan atau kebalikannya adalah <b>dibagi 3.</b></li>
+    <li>Agar persamaan tetap seimbang, jika ruas kiri dibagi 3, maka ruas kanan juga harus dibagi 3:</li>
+    \[ \begin{align*}
+    \frac{3 × x}{\color{#1b8a6b}{3}} &= \frac{12}{\color{#1b8a6b}{3}} \\
+    1 × x &= 4 \\
+    x &= 4
+    \end{align*} \]
+   </ul>
+<p>Atau kita gunakan <b>Analogi Benda</b></p>
+<p><i>"Bayangkan \(x\) itu adalah <b>harga satu buah apel.</b>"</i></p>
+  <ul style="text-align: justify;">
+    <li>\(3x = 12\) artinya 3 buah apel harganya Rp\(12.000\),-</li>
+    <li>Kalau mau tahu harga 1 buah apel, tentu total harganya \((12.000)\) tinggal dibagi dengan jumlah apelnya (\(3\)).</li>
+    <li>Jadi, \(x = \frac{12}{3} = 4\).
+</li></ul>
+
+</div>
+
+<p>Contoh 2: Tentukan nilai \(x\) dari persamaan berikut:</p>
+    
+    \[ \mathbf{5x - 4 = 2x + 11} \]
+    
+<p style="text-align: justify;">Ingat analoginya: <i>"kita ingin memisahkan kelompok variabel x dan kelompok angka biasa."</i></p>
+    
+    \[ \begin{align*}
+    5x {\color{#e41b17}{- 4}} &= {\color{#1569c7}{2x}} + 11 \\
+    5x {\color{#1569c7}{- 2x}} &= 11 {\color{#e41b17}{ + 4}} \\
+    {\color{#1b8a6b}{3}}x &= 15 \\
+    x &= \frac{15}{\color{#1b8a6b}{3}} \\
+    x &= 5
+    \end{align*} \]
+  </li>
+  
+  <li><h3 style="color: #000;">Persamaan Linear Dua Variabel (PLDV)</h3>
+    <p>Persamaan ini memiliki dua variabel berbeda (biasanya \(x\) dan \(y\)) dan pangkat tertinggi dari kedua variabel tersebut adalah satu.</p>
+    
+    <p><b>Bentuk Umum</b></p>
+    \[ ax + by = c \]
+    <ul style="list-style-type: circle;">
+    <li>\(x\) dan \(y\): Dua variabel yang belum diketahui nilainya.</li>
+    <li>\(a\), \(b\): Koefisien dari masing-masing variabel \((a ≠ 0, b ≠ 0)\).</li>
+    <li>\(c\): Konstanta.</li>
+    </ul>
+<p><b>Ciri Utama PLDV: Memiliki Tak Hingga Solusi</b></p>
+    
+    <p style="text-align: justify;">Berbeda dengan PLSV yang jawabannya cuma satu angka tunggal, satu buah PLDV punya <b>banyak pasang jawaban</b> (kombinasi \(x\) dan \(y\)) yang membuatnya bernilai benar.</p>
+    
+    <p>Contoh:</p>
+    \[ x + y = 10 \]
+    
+<p style="text-align: justify;">Kombinasi nilai \((x, y)\) yang memenuhi persamaan di atas antara lain:</p>
+    <ul>
+      <li>Jika \(x = 1\), maka \(y = 9 \rightarrow (1, 9)\)</li>
+      <li>Jika \(x = 2\), maka \(y = 8 \rightarrow (2, 8)\)</li>
+      <li>Jika \(x = 5\), maka \(y = 5 \rightarrow (5, 5)\)</li>
+      <li>Jika \(x = -2\), maka \(y = 12 \rightarrow (-2, 12)\)</li>
+    </ul>
+    
+<p>Jika pasangan titik $(x, y)$ tersebut digambar dalam bidang Kartesius, titik-titik itu akan membentuk satu garis lurus.</p>
+
+<div style="background-color: #fafafa; border-radius: 8px; border: 2px dashed rgb(203, 213, 225); font-family: Poppins, sans-serif; margin: 20px 0px; padding: 14px 18px;">
+  <strong style="color: #000; display: block; font-size: 15px; margin-bottom: 4px;">Kapan Jawaban PLDV Bisa Menjadi Tunggal?</strong>
+  <p style="text-align: justify;">Jika ingin mendapatkan satu pasang nilai $(x, y)$ yang pasti, kita membutuhkan dua buah PLDV yang saling berkaitan. Ini dinamakan <b>Sistem Persamaan Linear Dua Variabel (SPLDV).</b></p></div>
+    </li>
+  
+  <li><h3 style="color: #000;">Persamaan Linear Tiga Variabel (PLTV)</h3>
+    
+    <p>persamaan ini memiliki tiga variabel berbeda (biasanya \(x, y,\)  dan \(z)\) dengan pangkat tertinggi dari tiap variabelnya adalah satu.</p>
+</ol>
+
+<p><b>Bentuk Umum:</b></p>
+
+\[ ax + by + cz = d \]
+
+<ul>
+  <li>\(x, y,\) dan \(z\): Tiga variabel yang belum diketahui nilainya.</li>
+<li>\(a, b,\) dan \(c\): Koefisien dari masing-masing variabel \((a ≠ 0, b ≠ 0, c ≠ 0)\)</li>
+<li>\(d\): Konstanta.</li>
+</ul>
+
+<p><b>Ciri Utama PLTV: Memiliki Tak Hingga Solusi</b></p>
+
+<p style="text-align: justify;">Sama seperti PLDV, <b>satu buah persamaan PLTV tunggal tidak memiliki satu jawaban pasti</b>, melainkan punya <b>tak hingga kombinasi penyelesaian</b> \((x, y, z)\) yang membuat persamaan bernilai benar.</p>
+
+<p><b>Contoh:</b></p>
+
+\[ x + y + z = 6 \]
+
+<p style="text-align: justify;">Kombinasi nilai (x, y, z) yang memenuhi persamaan di atas antara lain:</p>
+
+<ul>
+  <li>Jika \(x = 1\) dan \(y = 2\), maka \(z = 3 \rightarrow (1, 2, 3) \) karena \(1 + 2 + 3 = 6\)</li>
+  <li>Jika \(x = 0\) dan \(y = 2\), maka \(z = 4 \rightarrow (0, 2, 4) \) karena \(0 + 2 + 4 = 6\)</li>
+<li>Jika \(x = 2\) dan \(y = 2\), maka \(z = 2 \rightarrow (2, 2, 2)\) karena \(2 + 2 + 2 = 6\)</li>
+<li>Jika \(x = -1\) dan \(y = 3\), maka \(z = 4 \rightarrow (-1, 3, 4)\) karena \(-1 + 3 + 4 = 6\)</li>
+</ul>
+
+<p style="text-align: justify;"><b>Catatan Visual:</b> Jika pasangan titik (x, y, z) tersebut digambarkan dalam ruang tiga dimensi (3D), titik-titik tersebut akan membentang dan membentuk sebuah <b>bidang datar lurus.</b></p>
+  
+<div style="background-color: #fafafa; border-radius: 8px; border: 2px dashed rgb(203, 213, 225); font-family: Poppins, sans-serif; margin: 20px 0px; padding: 14px 18px;">
+  <strong style="color: #000; display: block; font-size: 15px; margin-bottom: 4px;">Rangkuman Pola Persamaan Linear:</strong>
+  <span style="color: #334155; font-size: 14px;">
+<p>Dari ketiga jenis persamaan linear di atas, kita bisa melihat sebuah pola dasar yang sangat menarik:</p>
+   <ul>
+<li>PLSV (1 Variabel): Memiliki 1 penyelesaian pasti (satu angka tunggal).</li>
+<li>PLDV (2 Variabel): Memiliki tak hingga penyelesaian yang jika digambar membentuk garis lurus (2D).</li>
+<li>PLTV (3 Variabel): Memiliki tak hingga penyelesaian yang jika digambar membentuk bidang datar (3D).</li>
+  </ul></span></div>
+
+<h2 id="pisah-digit" style="border-left: 5px solid rgb(2, 132, 199); color: #0f172a; font-family: Poppins, sans-serif; font-weight: 700; margin-top: 30px; padding-left: 12px; text-align: justify;">Penutup</h2>
+
+<p style="text-align: justify;">Lalu, bagaimana caranya agar kita bisa mendapatkan satu nilai tunggal yang pasti untuk persamaan 2 variabel dan 3 variabel? Jawabannya akan kita bahas di seri artikel sistem persamaan berikutnya! <i><a href="https://binderkedua.blogspot.com/2026/09/panduan-persamaan-linear-dari-satu-dua.html">"Panduan Persamaan Linear: Dari Satu, Dua, hingga Tiga Variabel"</a></i></p>
+
+<p>Sampai jumpa lagi! </p>
+    
