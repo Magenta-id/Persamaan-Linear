@@ -1,3 +1,6 @@
+console.log("JS Berhasil Terhubung!");
+
+
 // Nonaktifkan pemulihan posisi scroll otomatis browser
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
